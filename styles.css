@@ -114,3 +114,21 @@ img,svg{display:block}
 /* Motion */
 .feature, .plan, .faq details, .form {transition:transform .2s ease, box-shadow .2s ease}
 .feature:hover, .plan:hover, .faq details:hover, .form:hover {transform:translateY(-1px);box-shadow:0 12px 40px rgba(2,8,23,.18)}
+
+/* Auth */
+.auth{display:grid;place-items:center;min-height:calc(100dvh - 64px - 92px);padding:40px 0}
+.auth-card{width:min(560px, 100%);padding:22px}
+.tabs{display:flex;gap:8px;margin-bottom:12px;background:var(--bg-elev);border:1px solid var(--border);border-radius:12px;padding:6px}
+.tab{flex:1 1 auto;height:38px;border-radius:10px;border:1px solid transparent;background:transparent;color:var(--muted);font-weight:600}
+.tab.active{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff}
+.tab-panel{display:grid;gap:12px}
+.hidden{display:none}
+.error{min-height:20px;color:#ef4444;font-size:14px;margin:2px 0}
+.auth-card .btn{margin-top:4px}
+
+/* Maintenance */
+.maint{padding:28px}
+.maint-body{display:grid;gap:14px}
+.maint-status{display:flex;align-items:center;gap:12px}
+.spinner{width:18px;height:18px;border-radius:999px;border:3px solid rgba(148,163,184,.35);border-top-color:var(--brand);animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}

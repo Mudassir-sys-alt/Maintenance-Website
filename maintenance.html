@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="color-scheme" content="light dark" />
     <meta name="theme-color" content="#0ea5e9" />
-    <title>Sign in · YourApp</title>
-    <meta name="description" content="Secure login and signup for YourApp." />
+    <title>Loadshare Networks Under Maintenance Page</title>
+    <meta name="description" content="Loadshare Networks is currently under scheduled maintenance." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body class="theme">
-    <a class="skip-link" href="#main">Skip to content</a>
-
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#" aria-label="YourApp home">
+        <a class="brand" href="/" aria-label="Home">
           <svg class="brand-mark" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
             <defs>
               <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
@@ -39,47 +37,27 @@
       </div>
     </header>
 
-    <main id="main" class="auth">
+    <main class="section">
       <div class="container">
-        <div class="auth-card card">
-          <div class="tabs" role="tablist" aria-label="Authentication">
-            <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-login" id="tab-login">Login</button>
-            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-signup" id="tab-signup">Sign up</button>
+        <div class="card maint">
+          <header class="section-header">
+            <h1>Loadshare Networks Under Maintenance Page</h1>
+            <p>We are performing scheduled upgrades to improve reliability and performance.</p>
+          </header>
+          <div class="maint-body">
+            <div class="maint-status">
+              <div class="spinner" aria-hidden="true"></div>
+              <p><strong>Status:</strong> Maintenance in progress</p>
+            </div>
+            <ul class="list">
+              <li>APIs temporarily unavailable</li>
+              <li>Dashboard access is read-only</li>
+              <li>Webhooks queued for delivery after maintenance</li>
+            </ul>
+            <div class="maint-actions">
+              <a class="btn" href="/">Return to Login</a>
+            </div>
           </div>
-
-          <section id="panel-login" class="tab-panel" role="tabpanel" aria-labelledby="tab-login">
-            <form id="loginForm" class="form" novalidate>
-              <label>
-                <span>User ID or Email</span>
-                <input type="text" name="userid" autocomplete="username" required />
-              </label>
-              <label>
-                <span>Password</span>
-                <input type="password" name="password" autocomplete="current-password" required />
-              </label>
-              <p class="error" id="loginError" role="alert" aria-live="polite"></p>
-              <button class="btn btn-primary" type="submit">Sign in</button>
-            </form>
-          </section>
-
-          <section id="panel-signup" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-signup">
-            <form id="signupForm" class="form" novalidate>
-              <label>
-                <span>Email</span>
-                <input type="email" name="email" autocomplete="email" required />
-              </label>
-              <label>
-                <span>Password</span>
-                <input type="password" name="password" autocomplete="new-password" required />
-              </label>
-              <label>
-                <span>Confirm password</span>
-                <input type="password" name="confirm" autocomplete="new-password" required />
-              </label>
-              <p class="error" id="signupError" role="alert" aria-live="polite"></p>
-              <button class="btn btn-primary" type="submit">Create account</button>
-            </form>
-          </section>
         </div>
       </div>
     </main>
@@ -87,16 +65,16 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <div class="footer-brand">
-          <a class="brand" href="#" aria-label="YourApp home">
+          <a class="brand" href="/" aria-label="Home">
             <svg class="brand-mark" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="url(#g)" /></svg>
             <span class="brand-name">YourApp</span>
           </a>
-          <p>Made with care. MIT Licensed.</p>
+          <p>We will be back shortly. Thank you for your patience.</p>
         </div>
         <nav class="footer-nav" aria-label="Footer">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-          <a href="#">Support</a>
+          <a href="#">Status</a>
+          <a href="#">Updates</a>
+          <a href="#">Contact</a>
         </nav>
         <div class="footer-social">
           <a href="#" aria-label="Twitter" class="social">
@@ -110,6 +88,5 @@
     </footer>
 
     <script src="/main.js" defer></script>
-    <script src="/auth.js" defer></script>
   </body>
 </html>
