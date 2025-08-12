@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <title>Sign in · YourApp</title>
+    <meta name="description" content="Secure login and signup for YourApp." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body class="theme">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#" aria-label="YourApp home">
+          <svg class="brand-mark" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true" focusable="false">
+            <defs>
+              <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#0ea5e9" />
+                <stop offset="100%" stop-color="#22c55e" />
+              </linearGradient>
+            </defs>
+            <rect x="3" y="3" width="18" height="18" rx="4" fill="url(#g)" />
+            <path d="M8 12.5l2.5 2.5L16 9" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span class="brand-name">YourApp</span>
+        </a>
+        <nav class="site-nav" id="siteNav" aria-label="Primary">
+          <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode">
+            <svg class="sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M12 4V2m0 20v-2M4 12H2m20 0h-2M5.64 5.64L4.22 4.22m15.56 15.56-1.42-1.42M18.36 5.64l1.42-1.42M5.64 18.36l-1.42 1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg class="moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="currentColor"/></svg>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="auth">
+      <div class="container">
+        <div class="auth-card card">
+          <div class="tabs" role="tablist" aria-label="Authentication">
+            <button class="tab active" role="tab" aria-selected="true" aria-controls="panel-login" id="tab-login">Login</button>
+            <button class="tab" role="tab" aria-selected="false" aria-controls="panel-signup" id="tab-signup">Sign up</button>
+          </div>
+
+          <section id="panel-login" class="tab-panel" role="tabpanel" aria-labelledby="tab-login">
+            <form id="loginForm" class="form" novalidate>
+              <label>
+                <span>User ID or Email</span>
+                <input type="text" name="userid" autocomplete="username" required />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" name="password" autocomplete="current-password" required />
+              </label>
+              <p class="error" id="loginError" role="alert" aria-live="polite"></p>
+              <button class="btn btn-primary" type="submit">Sign in</button>
+            </form>
+          </section>
+
+          <section id="panel-signup" class="tab-panel hidden" role="tabpanel" aria-labelledby="tab-signup">
+            <form id="signupForm" class="form" novalidate>
+              <label>
+                <span>Email</span>
+                <input type="email" name="email" autocomplete="email" required />
+              </label>
+              <label>
+                <span>Password</span>
+                <input type="password" name="password" autocomplete="new-password" required />
+              </label>
+              <label>
+                <span>Confirm password</span>
+                <input type="password" name="confirm" autocomplete="new-password" required />
+              </label>
+              <p class="error" id="signupError" role="alert" aria-live="polite"></p>
+              <button class="btn btn-primary" type="submit">Create account</button>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a class="brand" href="#" aria-label="YourApp home">
+            <svg class="brand-mark" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4" fill="url(#g)" /></svg>
+            <span class="brand-name">YourApp</span>
+          </a>
+          <p>Made with care. MIT Licensed.</p>
+        </div>
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Support</a>
+        </nav>
+        <div class="footer-social">
+          <a href="#" aria-label="Twitter" class="social">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M22 5.8c-.7.3-1.5.6-2.3.7.8-.5 1.4-1.2 1.7-2.1-.8.5-1.7.9-2.6 1.1A3.8 3.8 0 0 0 12 7.8c0 .3 0 .6.1.9A10.8 10.8 0 0 1 3 5.1a3.8 3.8 0 0 0 1.2 5.1c-.6 0-1.1-.2-1.6-.4v.1c0 1.8 1.3 3.4 3.1 3.8-.6.1-1.1.1-1.7 0 .5 1.6 2 2.7 3.8 2.7A7.6 7.6 0 0 1 2 18.6 10.8 10.8 0 0 0 7.9 20c7.5 0 11.6-6.2 11.6-11.6v-.5c.8-.5 1.4-1.2 1.9-2.1z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" aria-label="GitHub" class="social">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 .5A11.5 11.5 0 0 0 8.2 22.9c.6.1.8-.2.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.2-1.1-1.6-1.1-1.6-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.5 2.5 1.1 3.1.8.1-.7.4-1.1.7-1.4-2.6-.3-5.4-1.3-5.4-6 0-1.3.5-2.4 1.2-3.2 0-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.2 2.9 18.2 3.2 18.2 3.2c.6 1.6.2 2.9.1 3.2.8.9 1.2 2 1.2 3.2 0 4.7-2.8 5.7-5.4 6 .4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .5z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/main.js" defer></script>
+    <script src="/auth.js" defer></script>
+  </body>
+</html>
